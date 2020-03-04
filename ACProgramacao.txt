@@ -2,7 +2,7 @@ def adicionar_pessoa(agenda, nome, telefone):
     if agenda.get(nome):
         return agenda
     else:
-        agenda[nome] = telefone
+        agenda[nome] = [telefone]
     return agenda
 
 
@@ -16,7 +16,7 @@ def pesquisar_pessoa(agenda, nome):
     if agenda.get(nome):
         return agenda[nome]
     else:
-        return 0
+        return agenda
 
 
 def adicionar_telefone(agenda, nome, telefone):
@@ -39,10 +39,25 @@ def remover_telefone(agenda, nome, telefone):
 
 
 agenda = {'Maria': [95198165, 6549519], 'Joao': [1599849]}
+print('adicionar pessoa')
 nome = input('Nome: ')
 telefone = int(input('Telefone: '))
-# print(adicionar_pessoa(agenda, nome, telefone))
-# print(remover_pessoa(agenda, nome))
-# print(pesquisar_pessoa(agenda, nome))
-# print(adicionar_telefone(agenda, nome, telefone))
+print(adicionar_pessoa(agenda, nome, telefone))
+
+print('remover pessoa')
+nome = input('Nome: ')
+print(remover_pessoa(agenda, nome))
+
+print('pesquisar pessoa')
+nome = input('Nome: ')
+print(pesquisar_pessoa(agenda, nome))
+
+print('adicionar telefone')
+nome = input('Nome: ')
+telefone = int(input('Telefone: '))
+print(adicionar_telefone(agenda, nome, telefone))
+
+print('remover telefone')
+nome = input('Nome: ')
+telefone = int(input('Telefone: '))
 print(remover_telefone(agenda, nome, telefone))
