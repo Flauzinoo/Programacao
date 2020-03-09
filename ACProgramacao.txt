@@ -36,3 +36,28 @@ def remover_telefone(agenda, nome, telefone):
             return agenda
     else:
         return agenda
+
+
+agenda = {'Maria': [95178516, 3215651], 'Joao': [951897]}
+print('Adicionar Nome')
+nome = input('Nome: ')
+telefone = int(input('Telefone: '))
+print(adicionar_pessoa(agenda, nome, telefone))
+
+print('Remover Pessoa')
+nome = input('Nome: ')
+print(remover_pessoa(agenda, nome))
+
+print('Pesquisar Pessoa')
+nome = input('Nome: ')
+print(pesquisar_pessoa(agenda, nome))
+
+print('Adicionar Telefone')
+nome = input('Nome: ')
+telefone = input('Telefone: ')
+print(adicionar_telefone(agenda, nome, telefone))
+
+print('Remover Pessoa')
+nome = input('Nome: ')
+telefone = input('Telefone: ')
+print(remover_telefone(agenda, nome, telefone))
