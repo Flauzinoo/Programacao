@@ -1,2 +1,2 @@
 # Programacao
-Thiago Bolado
+Thiago
